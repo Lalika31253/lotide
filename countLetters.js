@@ -20,9 +20,13 @@ const countLetters = function (string) {
         result[letter] = 1;
       }
     }
-    
+
   }
 
   return result;
 }
-console.log(countLetters("lighthouse in the house"));
+
+let result = countLetters("lighthouse in the house");
+
+assertEqual(result["h"], 4);
+assertEqual(result["i"], 2);

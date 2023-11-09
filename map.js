@@ -43,4 +43,3 @@ assertArraysEqual(result3, ['gr', 'co', 'to', 'ma', 'to']);
 
 
 
-

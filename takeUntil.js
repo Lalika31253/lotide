@@ -26,7 +26,8 @@ const takeUntil = function (array, callback) {
     if (!callback(item)) {
       results.push(item);
     } else {
-      break
+      //break
+      return results;
     }
   }
   return results;

@@ -11,5 +11,11 @@ describe("#tail", () => {
   it("returns last two elements when array has tree elements: [`Lighthouse`, `Labs`] for [`Hello``, `Lighthouse`, `Labs`]", () => {
     assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
   });
+  it("make sure the original array was not altered by the tail function", () => {
+    const words = ["Hello", "Lighthouse", "Labs"];
+    const result = tail(words);
+    assert.deepEqual(result, ["Lighthouse", "Labs"]);
+    assert.strictEqual(words.length, 3);
+  });
 });
 

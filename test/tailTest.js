@@ -1,10 +1,15 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+describe("#tail", () => {
+  it("returns empty array when array has one element: [] for [`Hello`]", () => {
+    assert.deepEqual(tail(["Hello"]), []);
+  });
+  it("returns empty array when there is no input in the array: [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+  it("returns last two elements when array has tree elements: [`Lighthouse`, `Labs`] for [`Hello``, `Lighthouse`, `Labs`]", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+});
 
-const result2 = tail(["Hello"]);
-assertEqual(result2.length, 0); // ensure we get empty array

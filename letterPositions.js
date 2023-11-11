@@ -1,26 +1,9 @@
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function (arr1, arr2) {
-  if (!eqArrays(arr1, arr2)) {
-    console.log(`👎👎👎 Assertion Faild: arrays are not equal ${arr1} !== ${arr2}`);
-  } else {
-    console.log(`👍👍👍 Assertion Passed: arrays are equal ${arr1} === ${arr2}`);
-  }
-}
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPositions = function (sentence) {
   const results = {};
-
+  
   //iterate over the string
   for (let i = 0; i < sentence.length; i++) {
 

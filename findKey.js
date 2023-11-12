@@ -30,4 +30,6 @@ const result1 = findKey({
 assertEqual(result, "noma");
 assertEqual(result1, undefined);
 
+module.exports = findKey;
+
 

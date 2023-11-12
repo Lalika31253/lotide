@@ -38,4 +38,6 @@ const obj3 = { hotel: "Malibu", stars: 4, reviews: "Preatty quet hotel" };
 assertObjectsEqual(obj1, obj2); // Should pass 
 assertObjectsEqual(obj1, obj3); // Should fail 
 
+module.exports = assertObjectsEqual;
+
 

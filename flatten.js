@@ -15,3 +15,5 @@ const flatten = function (arr) {
 
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
 console.log(flatten(["New", "Activity", ["From", "LHL"], ["Week", 1]])); // => ["New", "Activity", "From", "LHL", "Week", 1]
+
+module.exports = flatten;
